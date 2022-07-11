@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Categories Of BMI</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .road {
+        background-color: rgb(95, 255, 47);
+        height: 250px;
+        width: 100vw;
+        margin-top: 246px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    #car {
+        position: absolute;
+        margin-bottom: 300px;
+        margin-left: 290px;
+    }
+
+    #img1 {
+        display: inline;
+        position: absolute;
+        left: 650px;
+        cursor: pointer;
+        border: 2px solid grey;
+    }
+
+    #img1:hover{
+        background-color: grey;
+    }
+
+    #img2 {
+        display: inline;
+        position: absolute;
+        left: 650px;
+        cursor: pointer;
+        border: 2px solid grey
+    }
+
+    #img2:hover{
+        background-color: grey;
+    }
+
+    #img3 {
+        display: inline;
+        position: absolute;
+        left: 500px;
+        bottom: -10px;
+        cursor: pointer;
+        border: 2px solid grey
+    }
+
+    #img3:hover{
+        background-color: grey;
+    }
+
+    #img4 {
+        display: inline;
+        position: absolute;
+        left: 800px;
+        bottom: -10px;
+        cursor: pointer;
+        border: 2px solid grey
+    }
+
+    #img4:hover{
+        background-color: grey;
+    }
+</style>
+
+<body>
+    <div class="road">
+        <div id="car">
+            <img src="OIP.jpg" alt="hill climb car" id="car" height="200px" width="300px">
+        </div>
+    </div>
+    <div onclick="play()">
+        <img src="download.jpg" alt="nhty" height="100px" width="100px" id="img1">
+    </div>
+    <br><br><br><br><br><br><br>
+    <div onclick="down()">
+        <img src="down.jpg" alt="fkljvnfknfk" height="100px" width="100px" id="img2">
+    </div>
+    <div onclick="left()">
+        <img src="left.jpg" alt="ydxy" height="100px" width="100px" id="img3">
+    </div>
+    <div onclick="right()">
+        <img src="right.jpg" alt="jxihfcv" height="100px" width="100px" id="img4">
+    </div>
+    <br><br><br><br><br><br><br><br>
+</body>
+
+<script>
+    var car = document.getElementById("car");
+    function play() {
+        var poe = 0;
+        // alert("you moved to top")
+        var anim = setInterval(animate, 5);
+        function animate() {
+            if (poe == -203) {
+                clearInterval(anim)
+            }
+            else {
+                poe--;
+                car.style.top = poe+"px";
+            }
+        }
+    }
+    function down() {
+        // alert("you moved to down")
+        var loc = 0;
+        // alert("you moved to top")
+        var anime = setInterval(animated, 5);
+        function animated() {
+            if (loc == -180) {
+                clearInterval(anime)
+            }
+            else {
+               loc--;
+                car.style.bottom = loc+"px";
+            }
+        }
+    }
+    function left() {
+        var poet = 0;
+        // alert("you moved to top")
+        var animet = setInterval(grow, 5);
+        function grow() {
+            if (poet == -503) {
+                clearInterval(animet)
+            }
+            else {
+                poet--;
+                car.style.left= poet+"px";
+            }
+        }
+    }
+    function right() {
+        var tripu = 0;
+        // alert("you moved to top")
+        var my = setInterval(fast, 5);
+        function fast() {
+            if (tripu == 600) {
+                clearInterval(my)
+            }
+            else {
+                tripu++;
+                car.style.left = tripu+"px";
+            }
+        }
+    }
+</script>
+
+</html>
